@@ -91,12 +91,9 @@ document.addEventListener('DOMContentLoaded', () => {
         questionArea.classList.add('fade-in');
         optionsArea.innerHTML = '';
         questionText.textContent = q.text;
-        const isRouter = q.id === 'q1' || q.id === 'q1b';
-        optionsArea.classList.toggle('router-options', isRouter);
         q.options.forEach(function(opt) {
             const btn = document.createElement('button');
             btn.className = 'option-btn ripple';
-            if (isRouter) btn.classList.add('router-btn');
             if (userAnswers[q.attribute] === opt.value) btn.classList.add('selected');
             btn.textContent = opt.label;
             btn.onclick = function() { handleAnswer(q, opt.value, btn); };
