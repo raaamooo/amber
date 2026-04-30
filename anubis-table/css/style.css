@@ -558,3 +558,14 @@ footer {
     border-color: var(--gold);
     color: var(--gold);
 }
+
+.menu-card:target {
+    border: 2px solid var(--gold);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+    animation: highlightPulseGold 2s ease-out;
+}
+@keyframes highlightPulseGold {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
