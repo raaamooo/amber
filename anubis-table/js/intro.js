@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Lock body scroll
     document.body.style.overflow = 'hidden';
 
-    const skipBtn = document.querySelector('.skip-intro');
     const audio = document.getElementById('intro-sound');
     const eye = document.querySelector('.horus-eye');
     const lightBurst = document.querySelector('.light-burst');
@@ -63,12 +62,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 1500);
         }, 1000);
     }, 2000);
-
-    // Skip functionality
-    skipBtn.addEventListener('click', () => {
-        clearTimeout(sequence);
-        endIntro();
-    });
 
     function endIntro() {
         introOverlay.style.opacity = '0';
