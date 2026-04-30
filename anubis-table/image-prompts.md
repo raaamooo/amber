@@ -1,16 +1,16 @@
 # Gemini Image Generation Prompts (Ancient Egyptian Style)
 
-🌅 **HERO BANNER**
+ **HERO BANNER**
 **File:** `assets/images/hero.jpg`
 **Prompt:** "Cinematic wide shot of an ancient Egyptian banquet hall inside a torchlit pyramid, golden hieroglyphs glowing on sandstone walls, a long carved stone table covered in Egyptian feasts and chalices of hibiscus tea, beams of sunlight piercing through pillars, dust particles in the air, ultra-realistic, painterly, 4K, dramatic golden lighting."
 
-🎮 **PLAY WITH US BACKGROUND**
+ **PLAY WITH US BACKGROUND**
 **File:** `assets/images/anubis-barista.jpg`
 **Prompt:** "Anubis, the jackal-headed Egyptian god, working as a modern barista behind an ornate gold-and-black coffee bar inside a pyramid, wearing a black apron over his traditional kilt and gold collar, holding a steaming cup of Egyptian tea, hieroglyphs glowing on the wall behind him, espresso machine made of carved stone, warm cinematic lighting, hyper-realistic, fantasy-meets-modern, 4K."
 
 ---
 
-### 🍴 FOOD IMAGES
+###  FOOD IMAGES
 
 1. **koshari.jpg** — "Cleopatra reclining on a golden throne eating a bowl of Koshari with a bronze spoon, ornate jewelry, kohl-lined eyes, marble pillars and palm trees in the background, ultra-realistic cinematic painting, warm golden hour light."
 2. **molokhia.jpg** — "Pharaoh Tutankhamun seated at a stone feast table enjoying a bowl of green Molokhia stew with chicken, golden mask placed beside him, servants fanning him with palm leaves, torchlit pyramid hall, hyper-realistic painterly style."
@@ -21,7 +21,7 @@
 
 ---
 
-### 🥤 DRINKS IMAGES
+###  DRINKS IMAGES
 
 1. **sahlab.jpg** — "Cleopatra holding a steaming golden chalice of creamy white Sahlab topped with cinnamon and pistachios, smoke curling up, royal palace at night, candlelit, ultra-realistic cinematic."
 2. **karkadeh.jpg** — "Cleopatra smoking an ornate gold-and-ruby shisha while sipping deep red Karkadeh hibiscus tea from a crystal glass, lounging on silk cushions, palm fronds, golden lantern light, hyper-realistic painterly cinematic art, 4K."
@@ -32,7 +32,7 @@
 
 ---
 
-### 🍰 DESSERTS IMAGES
+###  DESSERTS IMAGES
 
 1. **om-ali.jpg** — "Cleopatra elegantly eating Om Ali bread pudding from an ornate silver bowl with a gold spoon, nuts and cinnamon visible, candlelit royal chamber, silk drapes, hyper-realistic painterly cinematic."
 2. **basbousa.jpg** — "Golden Basbousa semolina cake squares arranged on a carved stone platter shaped like a scarab beetle, pistachios on top, honey dripping, hieroglyph-engraved table, warm cinematic light."

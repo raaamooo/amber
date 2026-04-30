@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (audioBtn) {
         audioBtn.addEventListener('click', () => {
             audioEnabled = true;
-            audioBtn.innerHTML = '🔊 Sound Enabled';
+            audioBtn.innerHTML = ' Sound Enabled';
             audioBtn.style.color = '#D4AF37';
         });
     }

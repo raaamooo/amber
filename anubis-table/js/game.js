@@ -12,49 +12,49 @@ document.addEventListener('DOMContentLoaded', () => {
             text: "Mortal… what stirs within your heart today?",
             attribute: "mood",
             options: [
-                { label: "⚡ Energetic", value: "energetic" },
-                { label: "🔥 Adventurous", value: "adventurous" },
-                { label: "🌙 Cozy", value: "cozy" },
-                { label: "🕊️ Peaceful", value: "peaceful" }
+                { label: " Energetic", value: "energetic" },
+                { label: " Adventurous", value: "adventurous" },
+                { label: " Cozy", value: "cozy" },
+                { label: " Peaceful", value: "peaceful" }
             ]
         },
         {
             text: "Which flavor shall please your tongue?",
             attribute: "flavor",
             options: [
-                { label: "🍯 Sweet as honey", value: "sweet" },
-                { label: "🌶️ Fierce as fire", value: "fierce" },
-                { label: "🧂 Savory as the Nile", value: "savory" },
-                { label: "🌿 Refreshing as an oasis", value: "refreshing" }
+                { label: " Sweet as honey", value: "sweet" },
+                { label: " Fierce as fire", value: "fierce" },
+                { label: " Savory as the Nile", value: "savory" },
+                { label: " Refreshing as an oasis", value: "refreshing" }
             ]
         },
         {
             text: "Do you seek warmth, or the chill of the desert night?",
             attribute: "temp",
             options: [
-                { label: "🔥 Hot", value: "hot" },
-                { label: "❄️ Cold", value: "cold" },
-                { label: "🌗 Either pleases me", value: "either" }
+                { label: " Hot", value: "hot" },
+                { label: " Cold", value: "cold" },
+                { label: " Either pleases me", value: "either" }
             ]
         },
         {
             text: "How great is your hunger, traveler?",
             attribute: "hunger",
             options: [
-                { label: "🥖 A small offering", value: "offering" },
-                { label: "🍲 A modest meal", value: "modest" },
-                { label: "🍖 A pharaoh's feast", value: "feast" },
-                { label: "🍰 A sweet ending", value: "sweet" }
+                { label: " A small offering", value: "offering" },
+                { label: " A modest meal", value: "modest" },
+                { label: " A pharaoh's feast", value: "feast" },
+                { label: " A sweet ending", value: "sweet" }
             ]
         },
         {
             text: "What vibe calls to your spirit?",
             attribute: "vibe",
             options: [
-                { label: "🏛️ Ancient & traditional", value: "traditional" },
-                { label: "🌃 Modern & bold", value: "modern" },
-                { label: "🛺 Street markets of Cairo", value: "street" },
-                { label: "👑 Royal & luxurious", value: "royal" }
+                { label: " Ancient & traditional", value: "traditional" },
+                { label: " Modern & bold", value: "modern" },
+                { label: " Street markets of Cairo", value: "street" },
+                { label: " Royal & luxurious", value: "royal" }
             ]
         }
     ];
