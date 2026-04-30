@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Show result text instantly, then reveal card
         const resultText = document.getElementById('result-dialogue');
-        resultText.textContent = `The scales have spoken. Your destiny is... ${bestMatch.name}.`;
+        resultText.textContent = `The Oracle has spoken. Your destiny is... ${bestMatch.name}.`;
         
         void recommendedItemContainer.offsetWidth; // trigger reflow
         recommendedItemContainer.classList.add('scroll-reveal');
