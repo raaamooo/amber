@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.overflow = 'hidden';
 
     const skipBtn = document.querySelector('.skip-intro');
-    const audioBtn = document.querySelector('.audio-prompt');
     const audio = document.getElementById('intro-sound');
     const eye = document.querySelector('.horus-eye');
     const lightBurst = document.querySelector('.light-burst');
@@ -24,8 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
     flashWhite.className = 'flash-white';
     introOverlay.appendChild(flashWhite);
-
-    let audioEnabled = false;
 
     // Sand Particles
     const sandContainer = document.querySelector('.sand-particles');
@@ -42,15 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Audio Toggle
-    if (audioBtn) {
-        audioBtn.addEventListener('click', () => {
-            audioEnabled = true;
-            audioBtn.innerHTML = ' Sound Enabled';
-            audioBtn.style.color = '#D4AF37';
-        });
-    }
-
     // Sequence Timings
     const sequence = setTimeout(() => {
         // Phase 3: Blink and Burst (at 2s)
@@ -58,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         setTimeout(() => {
             lightBurst.classList.add('burst-active');
-            if (audioEnabled && audio) {
+            if (audio) {
                 audio.volume = 0.5;
                 audio.play().catch(e => console.log("Audio play blocked", e));
             }
@@ -86,6 +74,8 @@ document.addEventListener('DOMContentLoaded', () => {
         introOverlay.style.opacity = '0';
         document.body.style.overflow = '';
         localStorage.setItem('anubis_intro_seen', 'true');
+        const themeToggle = document.getElementById('theme-toggle');
+        if (themeToggle) themeToggle.style.display = '';
         
         setTimeout(() => {
             introOverlay.remove();
@@ -95,5 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function removeIntro() {
         introOverlay.remove();
         document.body.style.overflow = '';
+        const themeToggle = document.getElementById('theme-toggle');
+        if (themeToggle) themeToggle.style.display = '';
     }
 });

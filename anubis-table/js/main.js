@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const savedTheme = localStorage.getItem('anubis_theme') || 'dark';
     body.setAttribute('data-theme', savedTheme);
-    themeToggle.textContent = savedTheme === 'dark' ? '' : '';
+    themeToggle.textContent = savedTheme === 'dark' ? '🌙' : '☀️';
 
     themeToggle.addEventListener('click', () => {
         const currentTheme = body.getAttribute('data-theme');
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         body.setAttribute('data-theme', newTheme);
         localStorage.setItem('anubis_theme', newTheme);
-        themeToggle.textContent = newTheme === 'dark' ? '' : '';
+        themeToggle.textContent = newTheme === 'dark' ? '🌙' : '☀️';
     });
 
 
