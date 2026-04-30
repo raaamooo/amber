@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Selection</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --text-color: #f8fafc;
+            --card-bg: #1e293b;
+            --card-hover: #334155;
+            --accent-1: #3b82f6; /* Blue for Bites & Sips */
+            --accent-2: #eab308; /* Gold for Anubis' Table */
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+            background: linear-gradient(to right, var(--text-color), #94a3b8);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        p.subtitle {
+            font-size: 1.25rem;
+            color: #94a3b8;
+            margin-bottom: 4rem;
+        }
+
+        .options-container {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 0 2rem;
+        }
+
+        .option-card {
+            background-color: var(--card-bg);
+            border-radius: 1rem;
+            padding: 3rem 2rem;
+            width: 300px;
+            text-decoration: none;
+            color: var(--text-color);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+            box-sizing: border-box;
+        }
+
+        .option-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--accent-color);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+            transform-origin: left;
+        }
+
+        .option-card:hover {
+            transform: translateY(-10px);
+            background-color: var(--card-hover);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.6);
+        }
+
+        .option-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .option-card h2 {
+            font-size: 1.75rem;
+            margin: 0 0 1rem 0;
+            font-weight: 700;
+        }
+
+        .option-card p {
+            color: #cbd5e1;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .bites-card {
+            --accent-color: var(--accent-1);
+        }
+
+        .anubis-card {
+            --accent-color: var(--accent-2);
+        }
+
+        .icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .options-container {
+                flex-direction: column;
+            }
+            .option-card {
+                width: 100%;
+                max-width: 350px;
+            }
+            h1 {
+                font-size: 2.25rem;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Select a Menu Experience</h1>
+    <p class="subtitle">Choose between two unique culinary journeys.</p>
+
+    <div class="options-container">
+        <a href="bites-and-sips/index.html" class="option-card bites-card">
+            <div class="icon">☕</div>
+            <h2>Bites & Sips</h2>
+            <p>A modern, elegant café experience featuring artisanal coffee and delightful pastries.</p>
+        </a>
+
+        <a href="anubis-table/index.html" class="option-card anubis-card">
+            <div class="icon">🏜️</div>
+            <h2>Anubis' Table</h2>
+            <p>An immersive Egyptian-themed dining adventure complete with interactive trials.</p>
+        </a>
+    </div>
+</body>
+</html>
