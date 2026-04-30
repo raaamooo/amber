@@ -246,6 +246,11 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
         `;
 
+        const viewInMenuBtn = document.querySelector('.result-actions a');
+        if (viewInMenuBtn) {
+            viewInMenuBtn.href = `#item-${bestMatch.item.id}`;
+        }
+
         if (matches.length > 1) {
             runnerUpsSection.classList.remove('hidden');
             runnerUpsGrid.innerHTML = '';

@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!container) return;
         
         container.innerHTML = items.map(item => `
-            <div class="menu-card reveal">
+            <div class="menu-card reveal" id="item-${item.id}">
                 <img src="${item.image}" alt="${item.name} - Ancient Egyptian styled food" class="menu-image" loading="lazy">
                 <div class="menu-content">
                     <div class="menu-header">
