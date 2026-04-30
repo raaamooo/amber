@@ -418,7 +418,7 @@ footer {
 .icon-btn {
     background: none;
     border: none;
-    color: var(--primary-color);
+    color: var(--accent);
     font-size: 1.5rem;
     cursor: pointer;
     transition: transform 0.2s;
@@ -451,12 +451,12 @@ footer {
 .progress-fill {
     height: 100%;
     width: 0%;
-    background: var(--primary-color);
+    background: var(--accent);
     transition: width 0.3s ease;
 }
 
 .match-badge {
-    background: var(--primary-color);
+    background: var(--accent);
     color: white;
     padding: 0.3rem 1rem;
     border-radius: 20px;
@@ -481,8 +481,8 @@ footer {
 }
 
 [data-theme="dark"] .runner-up-card {
-    background: #1e293b;
-    border-color: #334155;
+    background: #211414;
+    border-color: #000000;
 }
 
 .runner-up-card img {
@@ -495,7 +495,7 @@ footer {
 
 .small-badge {
     font-size: 0.8rem;
-    color: var(--primary-color);
+    color: var(--accent);
     font-weight: bold;
 }
 
@@ -506,13 +506,13 @@ footer {
 }
 
 .option-btn.selected {
-    background: var(--primary-color);
+    background: var(--accent);
     color: white;
-    border-color: var(--primary-color);
+    border-color: var(--accent);
 }
 
 .menu-card:target {
-    border: 2px solid var(--primary-color);
+    border: 2px solid var(--accent);
     box-shadow: 0 0 20px rgba(246, 106, 59, 0.5);
     animation: highlightPulse 2s ease-out;
 }

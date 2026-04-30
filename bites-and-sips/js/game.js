@@ -236,20 +236,17 @@ document.addEventListener('DOMContentLoaded', () => {
         matchAccuracy.classList.remove('hidden');
 
         recommendedItemContainer.innerHTML = `
-            <img src="${bestMatch.item.image}" alt="${bestMatch.item.name}" class="menu-image">
-            <div class="menu-content">
-                <div class="menu-header">
-                    <h4 class="menu-title">${bestMatch.item.name}</h4>
-                    <span class="menu-price">${bestMatch.item.price} EGP</span>
+            <a href="#item-${bestMatch.item.id}" style="text-decoration: none; color: inherit; display: block; cursor: pointer; border-radius: inherit; transition: inherit;">
+                <img src="${bestMatch.item.image}" alt="${bestMatch.item.name}" class="menu-image">
+                <div class="menu-content">
+                    <div class="menu-header">
+                        <h4 class="menu-title">${bestMatch.item.name}</h4>
+                        <span class="menu-price">${bestMatch.item.price} EGP</span>
+                    </div>
+                    <p class="menu-desc">${bestMatch.item.description}</p>
                 </div>
-                <p class="menu-desc">${bestMatch.item.description}</p>
-            </div>
+            </a>
         `;
-
-        const viewInMenuBtn = document.querySelector('.result-actions a');
-        if (viewInMenuBtn) {
-            viewInMenuBtn.href = `#item-${bestMatch.item.id}`;
-        }
 
         if (matches.length > 1) {
             runnerUpsSection.classList.remove('hidden');
@@ -258,13 +255,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 const runnerUp = matches[i];
                 const acc = Math.round((runnerUp.score / maxPossible) * 100);
                 runnerUpsGrid.innerHTML += `
-                    <div class="runner-up-card">
+                    <a href="#item-${runnerUp.item.id}" class="runner-up-card" style="text-decoration: none; color: inherit; display: block; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s;">
                         <img src="${runnerUp.item.image}" alt="${runnerUp.item.name}">
                         <div class="runner-up-info">
                             <h5>${runnerUp.item.name}</h5>
                             <span class="small-badge">${acc}% Match</span>
                         </div>
-                    </div>
+                    </a>
                 `;
             }
         } else {

@@ -245,20 +245,17 @@ document.addEventListener('DOMContentLoaded', () => {
         resultDialogue.textContent = `The Oracle has spoken. Your destiny is... ${bestMatch.item.name}.`;
 
         recommendedItemContainer.innerHTML = `
-            <img src="${bestMatch.item.image}" alt="${bestMatch.item.name}" class="menu-image">
-            <div class="menu-content">
-                <div class="menu-header">
-                    <h4 class="menu-title">${bestMatch.item.name}</h4>
-                    <span class="menu-price">${bestMatch.item.price} EGP</span>
+            <a href="#item-${bestMatch.item.id}" style="text-decoration: none; color: inherit; display: block; cursor: pointer; border-radius: inherit; transition: inherit;">
+                <img src="${bestMatch.item.image}" alt="${bestMatch.item.name}" class="menu-image">
+                <div class="menu-content">
+                    <div class="menu-header">
+                        <h4 class="menu-title">${bestMatch.item.name}</h4>
+                        <span class="menu-price">${bestMatch.item.price} EGP</span>
+                    </div>
+                    <p class="menu-desc">${bestMatch.item.description}</p>
                 </div>
-                <p class="menu-desc">${bestMatch.item.description}</p>
-            </div>
+            </a>
         `;
-
-        const viewInMenuBtn = document.querySelector('.result-actions a');
-        if (viewInMenuBtn) {
-            viewInMenuBtn.href = `#item-${bestMatch.item.id}`;
-        }
 
         if (matches.length > 1) {
             runnerUpsSection.classList.remove('hidden');
@@ -267,13 +264,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 const runnerUp = matches[i];
                 const acc = Math.round((runnerUp.score / maxPossible) * 100);
                 runnerUpsGrid.innerHTML += `
-                    <div class="runner-up-card" style="border: 1px solid var(--gold); border-radius: 8px; padding: 10px; text-align: center;">
+                    <a href="#item-${runnerUp.item.id}" class="runner-up-card" style="text-decoration: none; color: inherit; display: block; cursor: pointer; border: 1px solid var(--gold); border-radius: 8px; padding: 10px; text-align: center; transition: transform 0.2s, box-shadow 0.2s;">
                         <img src="${runnerUp.item.image}" alt="${runnerUp.item.name}" style="width: 100%; height: 100px; object-fit: cover; border-radius: 4px; margin-bottom: 8px;">
                         <div class="runner-up-info">
                             <h5 style="color: var(--gold); margin: 0 0 5px 0;">${runnerUp.item.name}</h5>
                             <span class="small-badge" style="font-size: 0.8rem; opacity: 0.8;">${acc}% Match</span>
                         </div>
-                    </div>
+                    </a>
                 `;
             }
         } else {
