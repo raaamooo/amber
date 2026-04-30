@@ -1,0 +1,231 @@
+/* Intro Overlay */
+.intro-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: #000000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease-out;
+}
+
+/* Sand Particles */
+.sand-particles {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.sand-particle {
+    position: absolute;
+    background: #D4AF37;
+    border-radius: 50%;
+    opacity: 0.6;
+    animation: drift linear infinite;
+}
+
+@keyframes drift {
+    0% { 
+        transform: translateY(100vh) translateX(-50px) scale(0.5); 
+        opacity: 0; 
+    }
+    50% { 
+        opacity: 0.8; 
+        transform: translateY(40vh) translateX(20px) scale(1.2);
+    }
+    100% { 
+        transform: translateY(-10vh) translateX(80px) scale(0.5); 
+        opacity: 0; 
+    }
+}
+
+/* Eye of Horus SVG Container */
+.horus-container {
+    position: relative;
+    z-index: 2;
+}
+
+.horus-eye {
+    width: 320px;
+    height: auto;
+    filter: drop-shadow(0 0 12px #D4AF37);
+    animation: pulseGlow 3s infinite alternate;
+}
+
+@media (min-width: 768px) {
+    .horus-eye {
+        width: 480px;
+    }
+}
+
+/* SVG Stroke Animation Classes */
+.stroke-anim {
+    fill: none;
+    stroke: #D4AF37;
+    stroke-width: 3px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    /* Increased dasharray to cover the longest path completely */
+    stroke-dasharray: 600;
+    stroke-dashoffset: 600;
+}
+
+/* Phase 2: Drawing */
+.draw-1 { animation: drawStroke 0.6s ease-out forwards; }
+.draw-2 { animation: drawStroke 0.8s ease-out 0.4s forwards; }
+.draw-3 { animation: drawStroke 0.5s ease-out 1.0s forwards; }
+.draw-4 { animation: drawStroke 0.5s ease-out 1.3s forwards; }
+.draw-5 { animation: drawStroke 0.6s ease-out 1.6s forwards; }
+
+@keyframes drawStroke {
+    to { stroke-dashoffset: 0; }
+}
+
+@keyframes pulseGlow {
+    from { filter: drop-shadow(0 0 8px #D4AF37) drop-shadow(0 0 20px rgba(212,175,55,0.4)); }
+    to { filter: drop-shadow(0 0 15px #D4AF37) drop-shadow(0 0 35px rgba(212,175,55,0.7)); }
+}
+
+/* Phase 3 & 4: Blink and Burst */
+.eye-blink {
+    animation: blink 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes blink {
+    0% { transform: scaleY(1); }
+    50% { transform: scaleY(0.1); }
+    100% { transform: scaleY(1); }
+}
+
+.light-burst {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background: radial-gradient(circle, #D4AF37 0%, transparent 70%);
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    z-index: 3;
+    pointer-events: none;
+    border-radius: 50%;
+}
+
+.burst-active {
+    animation: radialBurst 1.5s cubic-bezier(0.1, 0.8, 0.3, 1) forwards;
+}
+
+@keyframes radialBurst {
+    0% { transform: translate(-50%, -50%) scale(0); opacity: 1; }
+    100% { transform: translate(-50%, -50%) scale(500); opacity: 0; }
+}
+
+.flash-white {
+    position: absolute;
+    inset: 0;
+    background: #fff;
+    opacity: 0;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.flash-active {
+    animation: whiteFlash 1.5s ease-out forwards;
+}
+
+@keyframes whiteFlash {
+    0% { opacity: 0; }
+    30% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* Tagline Reveal */
+.intro-text {
+    position: absolute;
+    bottom: 20%;
+    text-align: center;
+    color: #D4AF37;
+    z-index: 2;
+}
+
+.intro-text h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem;
+    letter-spacing: 4px;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.intro-text p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.text-reveal h1 {
+    animation: fadeUp 1s ease-out 3s forwards;
+}
+
+.text-reveal p {
+    animation: fadeUp 1s ease-out 3.5s forwards;
+}
+
+@keyframes fadeUp {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Skip Button */
+.skip-intro {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    background: transparent;
+    color: rgba(212, 175, 55, 0.7);
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    padding: 0.5rem 1rem;
+    font-family: 'Cinzel', serif;
+    font-size: 1rem;
+    cursor: pointer;
+    z-index: 20;
+    transition: all 0.3s;
+}
+
+.skip-intro:hover, .skip-intro:focus {
+    color: #D4AF37;
+    border-color: #D4AF37;
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+}
+
+/* Audio Prompt */
+.audio-prompt {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    color: rgba(255, 255, 255, 0.6);
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.audio-prompt:hover {
+    color: #D4AF37;
+}
+
+/* Prefers Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    .intro-overlay {
+        display: none !important;
+    }
+}

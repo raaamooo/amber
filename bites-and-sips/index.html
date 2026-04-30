@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bites & Sips | Interactive Egyptian Menu</title>
+    <meta name="description" content="Discover authentic Egyptian cuisine with our interactive menu and recommendation game. Koshari, Molokhia, and more!">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Floating Theme Toggle -->
+    <button id="theme-toggle" class="floating-theme-btn" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+
+    <main>
+        <section id="hero" class="hero">
+            <div class="logo-centered">
+                <span class="logo-icon">✨</span> Bites & Sips
+            </div>
+            <div class="hero-content">
+                <h1>Taste the Magic of Egypt</h1>
+                <p>Authentic flavors, modern vibes. Find your perfect bite today.</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="#menu" class="btn btn-primary">Explore Menu</a>
+                    <a href="#game" class="btn btn-secondary">Play With Us</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="menu" class="menu-section">
+            <h2 class="section-title">Our Menu</h2>
+            
+            <div class="menu-category">
+                <h3>Food</h3>
+                <div class="menu-grid" id="food-grid"></div>
+            </div>
+
+            <div class="menu-category">
+                <h3>Drinks</h3>
+                <div class="menu-grid" id="drinks-grid"></div>
+            </div>
+
+            <div class="menu-category">
+                <h3>Desserts</h3>
+                <div class="menu-grid" id="desserts-grid"></div>
+            </div>
+        </section>
+
+        <section id="game" class="game-section">
+            <div class="game-container">
+                <h2 class="section-title">Play With Us</h2>
+                <p>Not sure what to order? Let us recommend something!</p>
+                <div id="quiz-container" class="quiz-card">
+                    <button id="start-game" class="btn btn-secondary">Find My Craving</button>
+                    <div id="question-area" class="hidden">
+                        <h3 id="question-text"></h3>
+                        <div id="options-area" class="options-grid"></div>
+                    </div>
+                    <div id="result-area" class="hidden">
+                        <h3>We recommend:</h3>
+                        <div id="recommended-item" class="menu-card recommended-card"></div>
+                        <button id="restart-game" class="btn btn-outline mt-3">Play Again</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Bites & Sips</h3>
+                <p>Authentic Egyptian Eats.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#game">Game</a></li>
+                    <li><a href="#footer">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Visit Us</h4>
+                <p>12 Tahrir Street, Cairo, Egypt</p>
+                <p>Phone: +20 123 456 7890</p>
+                <p>Hours: 10:00 AM - 12:00 AM</p>
+            </div>
+            <div class="footer-socials">
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Bites & Sips. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/menu-data.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anubis' Table | A Pharaoh's Menu</title>
+    <meta name="description" content="Dine like a god. Drink like a pharaoh. Ancient Egyptian mythology meets modern Egyptian cuisine.">
+    <!-- Google Fonts: Cinzel for headings, Poppins for body text -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/intro.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Subtle floating hieroglyphs in background -->
+    <div class="hieroglyph-bg" aria-hidden="true">
+        <span>𓀀</span><span>𓃭</span><span>𓅃</span><span>𓆣</span><span>𓋹</span><span>𓍹</span><span>𓏤</span><span>𓁧</span>
+        <span>𓀀</span><span>𓃭</span><span>𓅃</span><span>𓆣</span><span>𓋹</span><span>𓍹</span><span>𓏤</span><span>𓁧</span>
+    </div>
+
+    <!-- Cinematic Intro Sequence -->
+    <div id="intro-overlay" class="intro-overlay" role="dialog" aria-modal="true">
+        <div class="sand-particles"></div>
+        <button class="audio-prompt" aria-label="Enable sound">🔈 Enable sound</button>
+        <audio id="intro-sound" src="assets/sounds/intro-gong.mp3" preload="auto"></audio>
+        
+        <div class="horus-container">
+            <svg class="horus-eye" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <!-- Eyebrow -->
+                <path class="brow stroke-anim draw-1" d="M 30,40 Q 100,20 170,40" />
+                <!-- Eye Top & Bottom -->
+                <path class="eye-outline stroke-anim draw-2" d="M 20,65 Q 100,35 180,65 Q 100,95 20,65 Z" />
+                <!-- Pupil -->
+                <circle class="pupil stroke-anim draw-3" cx="100" cy="65" r="12" />
+                <!-- Teardrop -->
+                <path class="teardrop stroke-anim draw-4" d="M 100,77 L 100,110" />
+                <!-- Spiral Tail -->
+                <path class="spiral stroke-anim draw-5" d="M 120,75 C 140,95 110,120 115,95" />
+            </svg>
+            <div class="light-burst"></div>
+        </div>
+
+        <div class="intro-text">
+            <h1>Anubis' Table</h1>
+            <p>Dine like a god. Drink like a pharaoh.</p>
+        </div>
+
+        <button class="skip-intro ripple" aria-label="Skip intro">Skip ▶</button>
+    </div>
+
+    <!-- Floating Theme Toggle -->
+    <button id="theme-toggle" class="floating-theme-btn" aria-label="Toggle theme">🌙</button>
+
+    <main>
+        <section id="hero" class="hero">
+            <div class="logo-centered">
+                <span class="logo-icon">𓋹☕</span> Anubis' Table
+            </div>
+            <div class="hero-content">
+                <h1 class="glow-text">Dine like a god. <br>Drink like a pharaoh.</h1>
+                <p>Enter the tomb of flavor. Authentic Egyptian cuisine served in eternal glory.</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="#menu" class="btn btn-gold ripple">Summon the Menu</a>
+                    <a href="#game" class="btn btn-outline ripple">Trial of Anubis</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider eye-of-horus">𓅃</div>
+
+        <section id="menu" class="menu-section">
+            <h2 class="section-title"><span>The Offerings</span></h2>
+            
+            <div class="menu-category">
+                <h3 class="category-title">Feasts of the Pharaohs</h3>
+                <div class="menu-grid" id="food-grid"></div>
+            </div>
+
+            <div class="menu-category">
+                <h3 class="category-title">Nectars of the Nile</h3>
+                <div class="menu-grid" id="drinks-grid"></div>
+            </div>
+
+            <div class="menu-category">
+                <h3 class="category-title">Sweets of the Gods</h3>
+                <div class="menu-grid" id="desserts-grid"></div>
+            </div>
+        </section>
+
+        <div class="divider ankh-divider">𓋹 𓋹 𓋹</div>
+
+        <section id="game" class="game-section">
+            <div class="game-container">
+                <h2 class="section-title"><span>The Trial of Anubis</span></h2>
+                <p class="subtitle">Let the God of the Afterlife choose your feast...</p>
+                
+                <div class="anubis-banner">
+                    <img src="assets/images/anubis-barista.jpg" alt="Anubis serving coffee in a modern tomb" loading="lazy" class="anubis-img">
+                </div>
+
+                <div id="quiz-container" class="stone-tablet">
+                    <button id="start-game" class="btn btn-gold ripple">Approach the Scales</button>
+                    
+                    <div id="question-area" class="hidden">
+                        <div class="anubis-dialogue">
+                            <span class="typing-text" id="question-text"></span>
+                        </div>
+                        <div id="options-area" class="options-grid"></div>
+                    </div>
+                    
+                    <div id="result-area" class="hidden">
+                        <div class="anubis-dialogue">
+                            <span id="result-dialogue">The scales have spoken. Your destiny is...</span>
+                        </div>
+                        <div id="recommended-item" class="menu-card recommended-card scroll-reveal"></div>
+                        <button id="restart-game" class="btn btn-outline ripple mt-3">Try Again</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Anubis' Table</h3>
+                <p>Dine like a god. Drink like a pharaoh.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#game">Trial of Anubis</a></li>
+                    <li><a href="#footer">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>The Eternal Address</h4>
+                <p>12 Tahrir Street, Cairo, Egypt<br>beside the eternal Nile</p>
+                <p>Phone: +20 123 456 7890</p>
+                <p>Hours: Open from sunrise (Ra) to midnight (Khonsu)</p>
+            </div>
+            <div class="footer-socials">
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="hieroglyph-border">𓃭 𓅃 𓆣 𓋹 𓍹 𓏤 𓁧 𓃭 𓅃 𓆣 𓋹 𓍹 𓏤 𓁧</div>
+            <p>&copy; 2025 Anubis' Table. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/menu-data.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/intro.js"></script>
+</body>
+</html>

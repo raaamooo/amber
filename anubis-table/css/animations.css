@@ -1,0 +1,152 @@
+/* Hieroglyph Background Animation */
+.hieroglyph-bg {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    pointer-events: none;
+    z-index: -2;
+    overflow: hidden;
+    opacity: 0.05;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+    font-size: 4rem;
+    color: var(--gold-accent);
+}
+
+.hieroglyph-bg span {
+    animation: floatHieroglyph 15s infinite alternate ease-in-out;
+}
+.hieroglyph-bg span:nth-child(2n) {
+    animation-duration: 20s;
+    animation-direction: alternate-reverse;
+    animation-delay: -5s;
+}
+.hieroglyph-bg span:nth-child(3n) {
+    animation-duration: 12s;
+    animation-delay: -8s;
+}
+
+@keyframes floatHieroglyph {
+    0% { transform: translateY(0) rotate(0deg); opacity: 0.1; }
+    50% { transform: translateY(-25px) rotate(8deg); opacity: 0.7; }
+    100% { transform: translateY(15px) rotate(-5deg); opacity: 0.1; }
+}
+
+/* Scroll Reveal Animations (Turning Papyrus Scroll feel) */
+.reveal {
+    opacity: 0;
+    transform: perspective(600px) rotateX(-10deg) translateY(30px);
+    transform-origin: top center;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: perspective(600px) rotateX(0deg) translateY(0);
+}
+
+/* Loader Animation */
+.loader-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-color: #000;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.6s ease-out;
+}
+
+.ankh-loader {
+    font-size: 6rem;
+    color: transparent;
+    -webkit-text-stroke: 2px var(--gold-accent);
+    position: relative;
+}
+
+.ankh-loader::before {
+    content: "𓋹";
+    position: absolute;
+    top: 0; left: 0;
+    color: var(--gold-accent);
+    overflow: hidden;
+    width: 0%;
+    animation: drawAnkh 1.5s ease-in-out forwards;
+}
+
+@keyframes drawAnkh {
+    0% { width: 0%; }
+    100% { width: 100%; }
+}
+
+.loader-overlay.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Glow Text */
+.glow-text {
+    animation: pulseGlow 3s infinite alternate ease-in-out;
+}
+
+@keyframes pulseGlow {
+    from { text-shadow: 2px 2px 10px rgba(0,0,0,0.8), 0 0 10px var(--gold-glow); }
+    to { text-shadow: 2px 2px 10px rgba(0,0,0,0.8), 0 0 30px var(--gold-accent); }
+}
+
+/* Ripple / Sand Burst Effect for Buttons */
+.ripple {
+    position: relative;
+    overflow: hidden;
+}
+
+.ripple::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    background-image: radial-gradient(circle, var(--gold-accent) 10%, transparent 10.01%);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    transform: scale(10, 10);
+    opacity: 0;
+    transition: transform .5s, opacity 1s;
+}
+
+.ripple:active::after {
+    transform: scale(0, 0);
+    opacity: 0.4;
+    transition: 0s;
+}
+
+/* Typing text cursor */
+.typing-text::after {
+    content: "|";
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+/* Scroll reveal for recommended card (Heavy Stone Slab) */
+.scroll-reveal {
+    animation: stoneDrop 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    opacity: 0;
+}
+
+@keyframes stoneDrop {
+    0% { 
+        opacity: 0; 
+        transform: perspective(800px) rotateX(-30deg) translateY(-50px) scale(0.9);
+    }
+    100% { 
+        opacity: 1; 
+        transform: perspective(800px) rotateX(0deg) translateY(0) scale(1);
+    }
+}
