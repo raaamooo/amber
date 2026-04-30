@@ -55,14 +55,35 @@
                 <p>Not sure what to order? Let us recommend something!</p>
                 <div id="quiz-container" class="quiz-card">
                     <button id="start-game" class="btn btn-secondary">Find My Craving</button>
+
+                    <div id="game-ui-header" class="hidden">
+                        <button id="back-btn" class="icon-btn" aria-label="Go back"><i class="fas fa-arrow-left"></i></button>
+                        <div class="progress-container">
+                            <span id="progress-text">Question 1 of 6</span>
+                            <div class="progress-bar"><div id="progress-fill" class="progress-fill"></div></div>
+                        </div>
+                    </div>
+
                     <div id="question-area" class="hidden">
                         <h3 id="question-text"></h3>
                         <div id="options-area" class="options-grid"></div>
                     </div>
+
                     <div id="result-area" class="hidden">
-                        <h3>We recommend:</h3>
-                        <div id="recommended-item" class="menu-card recommended-card"></div>
-                        <button id="restart-game" class="btn btn-outline mt-3">Play Again</button>
+                        <h3 class="result-headline">Your Perfect Match</h3>
+                        <div class="match-badge hidden" id="match-accuracy">100% Match</div>
+                        
+                        <div id="recommended-item" class="menu-card recommended-card main-match"></div>
+                        
+                        <div class="runner-ups-section hidden" id="runner-ups-section">
+                            <h4>You might also love</h4>
+                            <div class="runner-ups-grid" id="runner-ups-grid"></div>
+                        </div>
+                        
+                        <div class="result-actions" style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem;">
+                            <button id="restart-game" class="btn btn-outline">Play Again</button>
+                            <a href="#menu" class="btn btn-primary">View in Menu</a>
+                        </div>
                     </div>
                 </div>
             </div>
