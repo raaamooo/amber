@@ -3,149 +3,450 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu Selection</title>
+    <title>Choose Your Experience</title>
+    <meta name="description" content="Choose between two unique Egyptian culinary journeys - Bites & Sips or Anubis' Table.">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        :root {
-            --bg-color: #0f172a;
-            --text-color: #f8fafc;
-            --card-bg: #1e293b;
-            --card-hover: #334155;
-            --accent-1: #3b82f6; /* Blue for Bites & Sips */
-            --accent-2: #eab308; /* Gold for Anubis' Table */
-        }
-
-        body {
-            font-family: 'Inter', system-ui, -apple-system, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
+        *, *::before, *::after {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-deep: #060a13;
+            --bg-surface: rgba(15, 23, 42, 0.6);
+            --text-primary: #f1f5f9;
+            --text-muted: #94a3b8;
+            --accent-modern: #D4A373;
+            --accent-modern-glow: rgba(212, 163, 115, 0.4);
+            --accent-ancient: #d4af37;
+            --accent-ancient-glow: rgba(212, 175, 55, 0.4);
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --glass-bg: rgba(255, 255, 255, 0.04);
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Outfit', system-ui, sans-serif;
+            background: var(--bg-deep);
+            color: var(--text-primary);
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            min-height: 100vh;
-            text-align: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* === Animated Background === */
+        .bg-canvas {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        /* Large gradient orbs */
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.25;
+            animation: orbFloat 20s ease-in-out infinite;
+        }
+        .orb-1 {
+            width: 600px; height: 600px;
+            background: radial-gradient(circle, var(--accent-modern), transparent 70%);
+            top: -15%; left: -10%;
+            animation-delay: 0s;
+        }
+        .orb-2 {
+            width: 500px; height: 500px;
+            background: radial-gradient(circle, var(--accent-ancient), transparent 70%);
+            bottom: -20%; right: -10%;
+            animation-delay: -7s;
+            animation-duration: 25s;
+        }
+        .orb-3 {
+            width: 350px; height: 350px;
+            background: radial-gradient(circle, #6366f1, transparent 70%);
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            animation-delay: -14s;
+            animation-duration: 30s;
+            opacity: 0.12;
+        }
+
+        @keyframes orbFloat {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            25% { transform: translate(40px, -30px) scale(1.05); }
+            50% { transform: translate(-20px, 40px) scale(0.95); }
+            75% { transform: translate(30px, 20px) scale(1.02); }
+        }
+
+        /* Floating particles */
+        .particles {
+            position: absolute;
+            inset: 0;
+        }
+        .particle {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            animation: particleDrift linear infinite;
+        }
+
+        @keyframes particleDrift {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+        }
+
+        /* Grid pattern overlay */
+        .grid-overlay {
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
+            background-size: 60px 60px;
+            animation: gridShift 40s linear infinite;
+        }
+
+        @keyframes gridShift {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(60px, 60px); }
+        }
+
+        /* === Content === */
+        .content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+            animation: contentFadeIn 1.2s ease-out;
+        }
+
+        @keyframes contentFadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Header */
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1.25rem;
+            border-radius: 100px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(10px);
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            animation: contentFadeIn 1.2s ease-out 0.2s both;
+        }
+        .badge i {
+            color: var(--accent-ancient);
+            font-size: 0.75rem;
         }
 
         h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
             font-weight: 800;
-            background: linear-gradient(to right, var(--text-color), #94a3b8);
+            line-height: 1.1;
+            margin-bottom: 1.25rem;
+            letter-spacing: -0.02em;
+            animation: contentFadeIn 1.2s ease-out 0.4s both;
+        }
+        h1 .line-1 {
+            display: block;
+            background: linear-gradient(135deg, var(--text-primary) 0%, #cbd5e1 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        h1 .line-2 {
+            display: block;
+            background: linear-gradient(135deg, var(--accent-modern) 0%, var(--accent-ancient) 100%);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
         }
 
-        p.subtitle {
-            font-size: 1.25rem;
-            color: #94a3b8;
+        .subtitle {
+            font-size: clamp(1rem, 2vw, 1.3rem);
+            font-weight: 300;
+            color: var(--text-muted);
             margin-bottom: 4rem;
+            max-width: 500px;
+            line-height: 1.6;
+            animation: contentFadeIn 1.2s ease-out 0.6s both;
         }
 
-        .options-container {
+        /* === Cards === */
+        .cards-container {
             display: flex;
             gap: 2rem;
             flex-wrap: wrap;
             justify-content: center;
-            padding: 0 2rem;
+            padding: 0 1rem;
+            animation: contentFadeIn 1.2s ease-out 0.8s both;
         }
 
-        .option-card {
-            background-color: var(--card-bg);
-            border-radius: 1rem;
-            padding: 3rem 2rem;
-            width: 300px;
-            text-decoration: none;
-            color: var(--text-color);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        .card {
             position: relative;
+            width: 340px;
+            padding: 2.5rem 2rem;
+            border-radius: 1.25rem;
+            text-decoration: none;
+            color: var(--text-primary);
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(20px);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
             overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
-            box-sizing: border-box;
+            cursor: pointer;
         }
 
-        .option-card::before {
+        /* Accent glow behind card on hover */
+        .card::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: var(--accent-color);
-            transform: scaleX(0);
+            inset: -2px;
+            border-radius: inherit;
+            background: linear-gradient(135deg, var(--glow-color), transparent 60%);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            z-index: -1;
+        }
+
+        /* Inner shimmer line */
+        .card::after {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-12px) scale(1.02);
+            border-color: var(--glow-color);
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5), 0 0 40px var(--glow-shadow);
+        }
+        .card:hover::before { opacity: 0.15; }
+        .card:hover::after { left: 100%; }
+
+        .card-modern {
+            --glow-color: var(--accent-modern);
+            --glow-shadow: var(--accent-modern-glow);
+        }
+        .card-ancient {
+            --glow-color: var(--accent-ancient);
+            --glow-shadow: var(--accent-ancient-glow);
+        }
+
+        /* Card icon */
+        .card-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--glow-color), transparent);
+            opacity: 0.9;
             transition: transform 0.3s ease;
-            transform-origin: left;
+        }
+        .card:hover .card-icon {
+            transform: scale(1.1) rotate(-5deg);
         }
 
-        .option-card:hover {
-            transform: translateY(-10px);
-            background-color: var(--card-hover);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.6);
-        }
-
-        .option-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .option-card h2 {
-            font-size: 1.75rem;
-            margin: 0 0 1rem 0;
+        .card h2 {
+            font-size: 1.6rem;
             font-weight: 700;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.01em;
         }
 
-        .option-card p {
-            color: #cbd5e1;
-            line-height: 1.6;
-            margin: 0;
-        }
-
-        .bites-card {
-            --accent-color: var(--accent-1);
-        }
-
-        .anubis-card {
-            --accent-color: var(--accent-2);
-        }
-
-        .icon {
-            font-size: 3rem;
+        .card p {
+            color: var(--text-muted);
+            line-height: 1.7;
+            font-size: 0.95rem;
+            font-weight: 300;
             margin-bottom: 1.5rem;
         }
-        
+
+        .card-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--glow-color);
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: gap 0.3s ease;
+        }
+        .card:hover .card-cta {
+            gap: 0.85rem;
+        }
+        .card-cta i {
+            font-size: 0.75rem;
+            transition: transform 0.3s ease;
+        }
+        .card:hover .card-cta i {
+            transform: translateX(3px);
+        }
+
+        /* Tags */
+        .card-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.25rem;
+        }
+        .tag {
+            padding: 0.25rem 0.75rem;
+            border-radius: 100px;
+            font-size: 0.75rem;
+            font-weight: 400;
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.08);
+            color: var(--text-muted);
+        }
+
+        /* Footer */
+        .footer-note {
+            position: relative;
+            z-index: 1;
+            margin-top: 4rem;
+            font-size: 0.8rem;
+            color: rgba(148, 163, 184, 0.5);
+            animation: contentFadeIn 1.2s ease-out 1s both;
+        }
+
+        /* === Responsive === */
         @media (max-width: 768px) {
-            .options-container {
+            .cards-container {
                 flex-direction: column;
+                align-items: center;
             }
-            .option-card {
+            .card {
                 width: 100%;
-                max-width: 350px;
-            }
-            h1 {
-                font-size: 2.25rem;
+                max-width: 360px;
             }
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Select a Menu Experience</h1>
-    <p class="subtitle">Choose between two unique culinary journeys.</p>
-
-    <div class="options-container">
-        <a href="bites-and-sips/index.html" class="option-card bites-card">
-            <div class="icon"></div>
-            <h2>Bites & Sips</h2>
-            <p>A modern, elegant café experience featuring artisanal coffee and delightful pastries.</p>
-        </a>
-
-        <a href="anubis-table/index.html" class="option-card anubis-card">
-            <div class="icon"></div>
-            <h2>Anubis' Table</h2>
-            <p>An immersive Egyptian-themed dining adventure complete with interactive trials.</p>
-        </a>
+    <!-- Animated Background -->
+    <div class="bg-canvas">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+        <div class="grid-overlay"></div>
+        <div class="particles" id="particles"></div>
     </div>
+
+    <!-- Content -->
+    <div class="content">
+        <div class="badge">
+            <i class="fas fa-circle"></i>
+            Two Experiences, One Destination
+        </div>
+
+        <h1>
+            <span class="line-1">Choose Your</span>
+            <span class="line-2">Culinary Journey</span>
+        </h1>
+
+        <p class="subtitle">
+            Step into a world of authentic Egyptian flavors. Pick the experience that speaks to your soul.
+        </p>
+
+        <div class="cards-container">
+            <a href="bites-and-sips/index.html" class="card card-modern" id="card-modern">
+                <div class="card-icon">
+                    <i class="fas fa-mug-hot"></i>
+                </div>
+                <h2>Bites & Sips</h2>
+                <div class="card-tags">
+                    <span class="tag">Modern</span>
+                    <span class="tag">Interactive</span>
+                    <span class="tag">Cozy</span>
+                </div>
+                <p>A warm, modern cafe experience with artisanal Egyptian comfort food and refreshing drinks.</p>
+                <span class="card-cta">Explore Menu <i class="fas fa-arrow-right"></i></span>
+            </a>
+
+            <a href="anubis-table/index.html" class="card card-ancient" id="card-ancient">
+                <div class="card-icon">
+                    <i class="fas fa-ankh"></i>
+                </div>
+                <h2>Anubis' Table</h2>
+                <div class="card-tags">
+                    <span class="tag">Ancient</span>
+                    <span class="tag">Mystical</span>
+                    <span class="tag">Immersive</span>
+                </div>
+                <p>An immersive Egyptian-themed dining adventure with interactive oracle trials and rich flavors.</p>
+                <span class="card-cta">Enter the Temple <i class="fas fa-arrow-right"></i></span>
+            </a>
+        </div>
+
+        <p class="footer-note">Handcrafted with love in Cairo, Egypt</p>
+    </div>
+
+    <script>
+        // Generate floating particles
+        const particlesContainer = document.getElementById('particles');
+        const particleCount = 40;
+        for (let i = 0; i < particleCount; i++) {
+            const p = document.createElement('div');
+            p.className = 'particle';
+            p.style.left = Math.random() * 100 + '%';
+            p.style.animationDuration = (Math.random() * 15 + 10) + 's';
+            p.style.animationDelay = (Math.random() * 20) + 's';
+            p.style.width = p.style.height = (Math.random() * 3 + 1) + 'px';
+            p.style.opacity = Math.random() * 0.5 + 0.1;
+            particlesContainer.appendChild(p);
+        }
+
+        // Subtle mouse parallax on cards
+        const cards = document.querySelectorAll('.card');
+        document.addEventListener('mousemove', (e) => {
+            const x = (e.clientX / window.innerWidth - 0.5) * 2;
+            const y = (e.clientY / window.innerHeight - 0.5) * 2;
+
+            cards.forEach((card, i) => {
+                const factor = i === 0 ? 1 : -1;
+                card.style.transform += '';
+                const baseX = x * 5 * factor;
+                const baseY = y * 5;
+                if (!card.matches(':hover')) {
+                    card.style.transform = `translate(${baseX}px, ${baseY}px)`;
+                }
+            });
+
+            // Move orbs slightly
+            document.querySelectorAll('.orb').forEach((orb, i) => {
+                const speed = (i + 1) * 8;
+                orb.style.transform = `translate(${x * speed}px, ${y * speed}px)`;
+            });
+        });
+    </script>
 </body>
 </html>
