@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anubis' Table | A Pharaoh's Menu</title>
-    <meta name="description" content="Dine like a god. Drink like a pharaoh. Ancient Egyptian mythology meets modern Egyptian cuisine.">
+    <meta name="description"
+        content="Dine like a god. Drink like a pharaoh. Ancient Egyptian mythology meets modern Egyptian cuisine.">
     <!-- Google Fonts: Cinzel for headings, Poppins for body text -->
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/intro.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
+
 <body>
     <!-- Subtle floating hieroglyphs in background -->
     <div class="hieroglyph-bg" aria-hidden="true">
@@ -25,7 +30,7 @@
         <div class="sand-particles"></div>
         <button class="audio-prompt" aria-label="Enable sound">🔈 Enable sound</button>
         <audio id="intro-sound" src="assets/sounds/intro-gong.mp3" preload="auto"></audio>
-        
+
         <div class="horus-container">
             <svg class="horus-eye" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <!-- Eyebrow -->
@@ -72,11 +77,12 @@
 
         <section id="menu" class="menu-section">
             <h2 class="section-title"><span>The Offerings</span></h2>
-            
+
             <div class="menu-category">
                 <h3 class="category-title">Feasts of the Pharaohs</h3>
                 <div class="menu-grid" id="food-grid"></div>
             </div>
+
 
             <div class="menu-category">
                 <h3 class="category-title">Nectars of the Nile</h3>
@@ -95,21 +101,22 @@
             <div class="game-container">
                 <h2 class="section-title"><span>The Trial of Anubis</span></h2>
                 <p class="subtitle">Let the God of the Afterlife choose your feast...</p>
-                
+
                 <div class="anubis-banner">
-                    <img src="assets/images/anubis-barista.jpg" alt="Anubis serving coffee in a modern tomb" loading="lazy" class="anubis-img">
+                    <img src="assets/images/anubis-barista.jpg" alt="Anubis serving coffee in a modern tomb"
+                        loading="lazy" class="anubis-img">
                 </div>
 
                 <div id="quiz-container" class="stone-tablet">
                     <button id="start-game" class="btn btn-gold ripple">Approach the Scales</button>
-                    
+
                     <div id="question-area" class="hidden">
                         <div class="anubis-dialogue">
                             <span class="typing-text" id="question-text"></span>
                         </div>
                         <div id="options-area" class="options-grid"></div>
                     </div>
-                    
+
                     <div id="result-area" class="hidden">
                         <div class="anubis-dialogue">
                             <span id="result-dialogue">The scales have spoken. Your destiny is...</span>
@@ -160,4 +167,5 @@
     <script src="js/main.js"></script>
     <script src="js/intro.js"></script>
 </body>
+
 </html>

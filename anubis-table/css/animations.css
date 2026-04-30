@@ -150,3 +150,13 @@
         transform: perspective(800px) rotateX(0deg) translateY(0) scale(1);
     }
 }
+
+/* Fade in for game transitions */
+@keyframes fadeInAnubis {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in-anubis {
+    animation: fadeInAnubis 0.5s ease-out forwards;
+}

@@ -76,6 +76,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function showQuestion() {
         const q = questions[currentQuestionIndex];
+        
+        // Retrigger fade animation
+        questionArea.classList.remove('fade-in-anubis');
+        void questionArea.offsetWidth; // Reflow
+        questionArea.classList.add('fade-in-anubis');
+
         optionsArea.innerHTML = '';
         questionText.textContent = q.text;
         
@@ -102,6 +108,12 @@ document.addEventListener('DOMContentLoaded', () => {
     function showResult() {
         questionArea.classList.add('hidden');
         resultArea.classList.remove('hidden');
+        
+        // Fade in result text
+        resultArea.classList.remove('fade-in-anubis');
+        void resultArea.offsetWidth;
+        resultArea.classList.add('fade-in-anubis');
+
         recommendedItemContainer.classList.remove('scroll-reveal');
 
         const bestMatch = calculateBestMatch();
