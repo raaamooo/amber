@@ -1005,3 +1005,40 @@ footer {
     opacity: 0.8;
     font-size: 0.95rem;
 }
+
+/* ═══════════════════════════════════════════════
+   UNAVAILABLE ITEM STYLES (Inventory Sync)
+   ═══════════════════════════════════════════════ */
+.menu-card.item-unavailable {
+    opacity: 0.45;
+    pointer-events: auto;
+    position: relative;
+}
+
+.menu-card.item-unavailable .menu-image {
+    filter: grayscale(60%);
+}
+
+.unavailable-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: rgba(229, 56, 59, 0.9);
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.25rem 0.7rem;
+    border-radius: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    z-index: 2;
+    backdrop-filter: blur(4px);
+}
+
+.add-to-order-btn.unavailable-btn {
+    background: transparent;
+    border-color: rgba(128, 128, 128, 0.3);
+    color: rgba(128, 128, 128, 0.6);
+    cursor: not-allowed;
+    pointer-events: none;
+}

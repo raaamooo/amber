@@ -310,6 +310,7 @@ const OrderManager = (() => {
         // Delay slightly so menu cards are rendered first
         setTimeout(() => {
             attachAddButtons();
+            applyInventorySync();
         }, 150);
         initPaymentToggles();
 
@@ -323,6 +324,60 @@ const OrderManager = (() => {
         if (noTipBtn) noTipBtn.classList.add('active');
 
         renderOrderSection();
+
+        // Poll inventory sync every 60 seconds
+        setInterval(applyInventorySync, 60000);
+    }
+
+    // ─── Inventory Sync (reads unavailable items from localStorage) ──
+    function applyInventorySync() {
+        let unavailable = [];
+        try {
+            unavailable = JSON.parse(localStorage.getItem('bitsAndSipsUnavailableItems')) || [];
+        } catch (e) {
+            unavailable = [];
+        }
+
+        const allCategories = ['food', 'drinks', 'desserts'];
+        allCategories.forEach(cat => {
+            const items = menuData[cat];
+            if (!items) return;
+            items.forEach(item => {
+                const card = document.getElementById('item-' + item.id);
+                if (!card) return;
+                const isUnavailable = unavailable.includes(item.id);
+
+                if (isUnavailable) {
+                    card.classList.add('item-unavailable');
+                    // Add badge if not already present
+                    if (!card.querySelector('.unavailable-badge')) {
+                        const badge = document.createElement('span');
+                        badge.className = 'unavailable-badge';
+                        badge.textContent = 'Unavailable';
+                        card.appendChild(badge);
+                    }
+                    // Replace add-to-order button
+                    const addBtn = card.querySelector('.add-to-order-btn');
+                    if (addBtn && !addBtn.classList.contains('unavailable-btn')) {
+                        addBtn.classList.add('unavailable-btn');
+                        addBtn.disabled = true;
+                        addBtn.innerHTML = '<i class="fas fa-ban"></i> Unavailable';
+                    }
+                } else {
+                    card.classList.remove('item-unavailable');
+                    // Remove badge
+                    const badge = card.querySelector('.unavailable-badge');
+                    if (badge) badge.remove();
+                    // Restore add-to-order button
+                    const addBtn = card.querySelector('.add-to-order-btn');
+                    if (addBtn && addBtn.classList.contains('unavailable-btn')) {
+                        addBtn.classList.remove('unavailable-btn');
+                        addBtn.disabled = false;
+                        addBtn.innerHTML = '<i class="fas fa-plus"></i> Add to Order';
+                    }
+                }
+            });
+        });
     }
 
     return { init, addToCart, attachAddButtons };
