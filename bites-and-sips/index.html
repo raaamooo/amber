@@ -12,8 +12,17 @@
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
+    <!-- Table Badge -->
+    <div id="table-badge" class="table-badge">Walk-in</div>
+
     <!-- Floating Theme Toggle -->
     <button id="theme-toggle" class="floating-theme-btn" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+
+    <!-- Floating Order Link -->
+    <a href="#order" class="floating-order-btn" id="floating-order-link" aria-label="View your order">
+        <i class="fas fa-receipt"></i>
+        <span id="order-count-badge" class="order-badge hidden">0</span>
+    </a>
 
     <main>
         <section id="hero" class="hero">
@@ -87,6 +96,107 @@
                 </div>
             </div>
         </section>
+
+        <!-- ═══ YOUR ORDER SECTION ═══ -->
+        <section id="order" class="order-section">
+            <h2 class="section-title">Your Order</h2>
+
+            <!-- Confirmation Message (outside filled state so it persists) -->
+            <div id="order-confirmation" class="order-confirmation hidden"></div>
+
+            <!-- Empty State -->
+            <div id="order-empty-state" class="order-empty">
+                <i class="fas fa-shopping-bag order-empty-icon"></i>
+                <h3>Your order is empty</h3>
+                <p>Browse our menu and add items to get started!</p>
+                <a href="#menu" class="btn btn-outline">Browse Menu</a>
+            </div>
+
+            <!-- Filled State -->
+            <div id="order-filled-state" class="order-form-wrapper hidden">
+                <div class="order-grid">
+                    <!-- Left Column: Items + Form -->
+                    <div class="order-left">
+                        <!-- Order Items -->
+                        <div class="order-card">
+                            <h3 class="order-card-title"><i class="fas fa-list"></i> Items</h3>
+                            <div id="order-items-list" class="order-items-list"></div>
+                            <div class="order-subtotal-row">
+                                <span>Subtotal</span>
+                                <span id="order-subtotal-value" class="order-subtotal-amount">0 EGP</span>
+                            </div>
+                        </div>
+
+                        <!-- Customer Name -->
+                        <div class="order-card">
+                            <label for="customer-name" class="order-label">Your Name <span class="required-star">*</span></label>
+                            <input type="text" id="customer-name" class="order-input" placeholder="Enter your name" required>
+                        </div>
+
+                        <!-- Notes -->
+                        <div class="order-card">
+                            <label for="order-notes" class="order-label">Notes</label>
+                            <textarea id="order-notes" class="order-textarea" placeholder="Any changes or special requests for your order" rows="3"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Payment + Tip + Summary -->
+                    <div class="order-right">
+                        <!-- Payment Method -->
+                        <div class="order-card">
+                            <h3 class="order-card-title">Payment Method</h3>
+                            <div class="toggle-group">
+                                <button class="toggle-btn payment-option" data-value="cash">
+                                    <i class="fas fa-money-bill-wave"></i> Cash
+                                </button>
+                                <button class="toggle-btn payment-option" data-value="visa">
+                                    <i class="fas fa-credit-card"></i> Visa
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Tip Selection -->
+                        <div class="order-card">
+                            <h3 class="order-card-title">Add a Tip</h3>
+                            <div class="toggle-group tip-group">
+                                <button class="toggle-btn tip-option" data-value="0">No Tip</button>
+                                <button class="toggle-btn tip-option" data-value="10">10%</button>
+                                <button class="toggle-btn tip-option" data-value="15">15%</button>
+                                <button class="toggle-btn tip-option" data-value="20">20%</button>
+                            </div>
+                            <div class="tip-display">
+                                Tip amount: <span id="tip-amount-display">0 EGP</span>
+                            </div>
+                        </div>
+
+                        <!-- Order Summary -->
+                        <div class="order-card order-summary-card">
+                            <h3 class="order-card-title">Order Summary</h3>
+                            <div class="summary-row">
+                                <span>Subtotal</span>
+                                <span id="summary-subtotal">0 EGP</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Tip</span>
+                                <span id="summary-tip">0 EGP</span>
+                            </div>
+                            <div class="summary-row summary-grand">
+                                <span>Grand Total</span>
+                                <span id="summary-grand">0 EGP</span>
+                            </div>
+                        </div>
+
+                        <!-- Error Message -->
+                        <div id="order-error" class="order-error hidden"></div>
+
+                        <!-- Place Order Button -->
+                        <button id="place-order-btn" class="btn btn-primary place-order-btn">
+                            <i class="fas fa-paper-plane"></i> Place Order
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer id="footer">
@@ -100,6 +210,7 @@
                 <ul>
                     <li><a href="#menu">Menu</a></li>
                     <li><a href="#game">Game</a></li>
+                    <li><a href="#order">Your Order</a></li>
                     <li><a href="#footer">Contact</a></li>
                 </ul>
             </div>
@@ -124,5 +235,6 @@
     <script src="js/menu-data.js"></script>
     <script src="js/game.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/order.js"></script>
 </body>
 </html>

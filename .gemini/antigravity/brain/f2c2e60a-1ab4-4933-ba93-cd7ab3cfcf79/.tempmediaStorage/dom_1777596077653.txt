@@ -1,0 +1,53 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+Table T3
+[0] (935,938)<button aria-label='Toggle dark mode' class='floating-theme-btn' id='theme-toggle' />
+	[1] (935,938)<i  />
+[2] (935,863)<a aria-label='View your order' class='floating-order-btn' href='#order' id='floating-order-link' />
+	[3] (935,863)<i  />
+	[4] (956,844)<span >1 />
+[5] (266,88)<label class='order-label'>Your Name
+* />
+	*
+[6] (266,134)<input class='order-input' id='customer-name' placeholder='Enter your name' />
+[7] (266,250)<label class='order-label'>Notes />
+[8] (266,319)<textarea class='order-textarea' id='order-notes' placeholder='Any changes or special requests for your order' />
+Add a Tip
+[9] (590,85)<button class='toggle-btn tip-option active'>No Tip />
+[10] (686,85)<button class='toggle-btn tip-option'>10% />
+[11] (782,85)<button class='toggle-btn tip-option'>15% />
+[12] (878,85)<button class='toggle-btn tip-option'>20% />
+Tip amount:
+0 EGP
+Order Summary
+Subtotal
+55 EGP
+Tip
+0 EGP
+Grand Total
+55 EGP
+[13] (734,503)<button class='btn btn-primary place-order-btn' id='place-order-btn'>Place Order />
+	[14] (674,503)<i  />
+Bites & Sips
+Authentic Egyptian Eats.
+Quick Links
+[15] (387,739)<a href='#menu'>Menu />
+[16] (390,774)<a href='#game'>Game />
+[17] (410,810)<a href='#order'>Your Order />
+[18] (399,845)<a href='#footer'>Contact />
+Visit Us
+12 Tahrir Street, Cairo, Egypt
+Phone: +20 123 456 7890
+Hours: 10:00 AM - 12:00 AM
+[19] (73,923)<a aria-label='Instagram' href='#' />
+	[20] (73,923)<i  />
+[21] (136,923)<a aria-label='Facebook' href='#' />
+	[22] (136,923)<i  />
+[23] (199,923)<a aria-label='TikTok' href='#' />
+	[24] (199,923)<i  />
+[25] (262,923)<a aria-label='WhatsApp' href='#' />
+	[26] (262,923)<i  />
+
+</current_dom>

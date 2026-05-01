@@ -1,0 +1,7 @@
+# Landing Page Testing Plan
+
+- [ ] Open `http://localhost:8000/index.html`
+- [ ] Wait 3 seconds for animations
+- [ ] Capture full page screenshot
+- [ ] Test parallax effects by moving mouse
+- [ ] Summarize results

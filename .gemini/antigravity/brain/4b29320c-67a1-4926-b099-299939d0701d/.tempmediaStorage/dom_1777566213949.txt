@@ -1,0 +1,7 @@
+[0] (939,939)<button aria-label='Toggle theme' class='floating-theme-btn' id='theme-toggle'>🌙 />
+Anubis' Table
+Dine like a god.
+Drink like a pharaoh.
+Enter the tomb of flavor. Authentic Egyptian cuisine served in eternal glory.
+[1] (338,667)<a class='btn btn-gold ripple' href='#menu'>Summon the Menu />
+[2] (653,667)<a class='btn btn-outline ripple' href='#game'>Consult the Oracle />

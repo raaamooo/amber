@@ -1,0 +1,88 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+Cashier
+6
+[0] (909,32)<button aria-label='Toggle sound' class='topbar-btn' id='sound-toggle' title='Toggle notification sound' />
+	[1] (909,32)<i  />
+[2] (956,32)<button aria-label='Toggle theme' class='topbar-btn' id='theme-toggle' title='Toggle dark/light mode' />
+	[3] (956,32)<i  />
+#3
+T5
+Cash
+Ahmed
+Koshari
+55 EGP
+Sahlab
+40 EGP
+No onions please
+Subtotal
+95 EGP
+Tip
+14.25 EGP (15%)
+Grand Total
+109.25 EGP
+12:54 AM · 4 hr 28 min ago
+[4] (151,464)<button class='action-btn secondary'>Print Check />
+	[5] (108,464)<i  />
+[6] (367,464)<button class='action-btn primary'>Send to Kitchen />
+	[7] (308,464)<i  />
+#4
+T2
+Cash
+Ahmed
+Koshari
+55 EGP
+Sahlab
+40 EGP
+Subtotal
+95 EGP
+Tip
+14.25 EGP (15%)
+Grand Total
+109.25 EGP
+01:11 AM · 4 hr 10 min ago
+[8] (635,413)<button class='action-btn secondary'>Print Check />
+	[9] (591,413)<i  />
+[10] (850,413)<button class='action-btn primary'>Send to Kitchen />
+	[11] (791,413)<i  />
+#5
+T2
+Cash
+AhmedAhmed
+Om Ali
+60 EGP
+Subtotal
+60 EGP
+Tip
+0 EGP
+Grand Total
+60 EGP
+01:22 AM · 3 hr 59 min ago
+[12] (151,857)<button class='action-btn secondary'>Print Check />
+	[13] (108,857)<i  />
+[14] (367,857)<button class='action-btn primary'>Send to Kitchen />
+	[15] (308,857)<i  />
+#6
+T1
+Cash
+Ramo
+Koshari
+55 EGP
+Sahlab
+40 EGP
+Extra spicy koshari
+Subtotal
+95 EGP
+Tip
+9.5 EGP (10%)
+Grand Total
+104.5 EGP
+01:55 AM · 3 hr 27 min ago
+[16] (635,941)<button class='action-btn secondary'>Print Check />
+	[17] (591,941)<i  />
+[18] (850,941)<button class='action-btn primary'>Send to Kitchen />
+	[19] (791,941)<i  />
+
+</current_dom>

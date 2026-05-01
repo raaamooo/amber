@@ -1,0 +1,10 @@
+Table T2
+[0] (935,938)<button aria-label='Toggle dark mode' class='floating-theme-btn' id='theme-toggle' />
+	[1] (935,938)<i  />
+[2] (935,863)<a aria-label='View your order' class='floating-order-btn' href='#order' id='floating-order-link' />
+	[3] (935,863)<i  />
+Bites & Sips
+Taste the Magic of Egypt
+Authentic flavors, modern vibes. Find your perfect bite today.
+[4] (399,587)<a class='btn btn-primary' href='#menu'>Explore Menu />
+[5] (605,587)<a class='btn btn-secondary' href='#game'>Play With Us />

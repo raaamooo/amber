@@ -1,0 +1,33 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+Table T3
+[0] (935,938)<button aria-label='Toggle dark mode' class='floating-theme-btn' id='theme-toggle' />
+	[1] (935,938)<i  />
+[2] (935,863)<a aria-label='View your order' class='floating-order-btn' href='#order' id='floating-order-link' />
+	[3] (935,863)<i  />
+	[4] (956,844)<span >1 />
+Ful Medames
+35 EGP
+Slow-cooked fava beans with olive oil, lemon & cumin
+[5] (266,214)<button class='add-to-order-btn'>Add to Order />
+	[6] (212,214)<i  />
+Hawawshi
+70 EGP
+Egyptian spiced minced meat baked in pita bread
+[7] (734,214)<button class='add-to-order-btn'>Add to Order />
+	[8] (680,214)<i  />
+Mahshi Warak Enab
+90 EGP
+Stuffed grape leaves with rice, herbs & spices
+[9] (266,639)<button class='add-to-order-btn'>Add to Order />
+	[10] (212,639)<i  />
+Fatta
+110 EGP
+Layers of rice, crispy bread, garlic vinegar sauce & beef
+[11] (734,662)<button class='add-to-order-btn'>Add to Order />
+	[12] (680,662)<i  />
+Drinks
+
+</current_dom>

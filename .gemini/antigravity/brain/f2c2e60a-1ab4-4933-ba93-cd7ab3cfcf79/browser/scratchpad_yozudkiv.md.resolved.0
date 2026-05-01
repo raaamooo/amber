@@ -1,0 +1,14 @@
+# Ordering System Test Plan
+
+- [ ] Open http://localhost:8080/index.html?table=T3
+- [ ] Verify "Table T3" badge in top-left corner
+- [ ] Scroll to menu and verify "Add to Order" buttons
+- [ ] Add Koshari, Sahlab, and Om Ali to order
+- [ ] Check for "Added" confirmation on buttons
+- [ ] Verify floating order button badge count
+- [ ] Scroll to "Your Order" section
+- [ ] Verify items in list and subtotal calculation
+- [ ] Verify form fields (name, notes, payment, tip) are present
+- [ ] Fill form: Name="Ahmed", Payment="Cash", Tip="15%"
+- [ ] Click "Place Order"
+- [ ] Observe and record confirmation message and any issues

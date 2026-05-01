@@ -44,6 +44,40 @@
     .options-grid {
         grid-template-columns: 1fr;
     }
+
+    /* Order section responsive */
+    .order-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tip-group {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .toggle-group {
+        flex-direction: column;
+    }
+
+    .toggle-group .toggle-btn {
+        flex: unset;
+    }
+
+    .floating-order-btn,
+    .floating-theme-btn {
+        width: 48px;
+        height: 48px;
+        font-size: 1.2rem;
+    }
+
+    .floating-order-btn {
+        bottom: 80px;
+        right: 16px;
+    }
+
+    .floating-theme-btn {
+        bottom: 20px;
+        right: 16px;
+    }
 }
 
 /* For Extra Small Screens (360px - 414px specifically tested via fluid sizing) */

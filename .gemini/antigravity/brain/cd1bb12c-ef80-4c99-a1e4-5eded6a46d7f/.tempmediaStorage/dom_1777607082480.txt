@@ -1,0 +1,249 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+Manager Overview
+Updated 06:44:39 AM
+[0] (956,32)<button aria-label='Toggle theme' class='topbar-btn' id='theme-toggle' title='Toggle dark/light mode' />
+	[1] (956,32)<i  />
+6
+Pending
+0
+In Kitchen
+1
+Ready
+0
+Completed
+7
+Total Today
+[2] (86,211)<label >Status />
+[3] (86,242)<select class='mgr-select' id='filter-status' />
+[4] (216,211)<label >Table />
+[5] (216,242)<select class='mgr-select' id='filter-table' />
+[6] (327,211)<label >Payment />
+[7] (327,242)<select class='mgr-select' id='filter-payment' />
+[8] (583,213)<label >Search />
+[9] (583,243)<input class='mgr-input' id='filter-search' placeholder='Name or order #' />
+[10] (886,244)<button class='action-btn secondary mgr-archive-btn' id='archive-btn'>Archive Completed />
+	[11] (821,244)<i  />
+[12] (424,332)<div  />
+	[13] (424,310)<div  />
+		[14] (106,310)<div  />
+			[15] (58,310)<span >#7 />
+			[16] (96,310)<span >T4 />
+				[17] (86,311)<i  />
+			[18] (145,310)<span >Ramo />
+		[19] (705,310)<div  />
+			[20] (640,310)<span >Ready />
+			[21] (709,310)<span >Cash />
+			[22] (774,310)<span >175 EGP />
+	[23] (424,337)<div >Koshari, Molokhia with Chicken />
+	[24] (424,359)<div  />
+		[25] (97,359)<span  />
+			[26] (51,359)<span  />
+			[27] (76,359)<span >Placed />
+			[28] (122,359)<span >02:17 AM />
+		[29] (156,359)<span  />
+		[30] (218,359)<span  />
+			[31] (169,359)<span  />
+			[32] (197,359)<span >Kitchen />
+			[33] (246,359)<span >02:21 AM />
+		[34] (280,359)<span  />
+		[35] (339,359)<span  />
+			[36] (293,359)<span  />
+			[37] (317,359)<span >Ready />
+			[38] (363,359)<span >02:24 AM />
+		[39] (398,359)<span  />
+		[40] (435,359)<span  />
+			[41] (411,359)<span  />
+			[42] (433,359)<span >Done />
+			[43] (456,359)<span >— />
+[44] (899,332)<select class='mgr-status-select mgr-select' />
+[45] (424,439)<div  />
+	[46] (424,418)<div  />
+		[47] (106,418)<div  />
+			[48] (58,418)<span >#6 />
+			[49] (96,418)<span >T1 />
+				[50] (88,418)<i  />
+			[51] (144,418)<span >Ramo />
+		[52] (691,418)<div  />
+			[53] (618,418)<span >Pending />
+			[54] (694,418)<span >Cash />
+			[55] (767,418)<span >104.5 EGP />
+	[56] (424,444)<div >Koshari, Sahlab />
+	[57] (424,466)<div  />
+		[58] (97,466)<span  />
+			[59] (51,466)<span  />
+			[60] (76,466)<span >Placed />
+			[61] (122,466)<span >01:55 AM />
+		[62] (156,466)<span  />
+		[63] (199,466)<span  />
+			[64] (169,466)<span  />
+			[65] (197,466)<span >Kitchen />
+			[66] (227,466)<span >— />
+		[67] (242,466)<span  />
+		[68] (282,466)<span  />
+			[69] (255,466)<span  />
+			[70] (279,466)<span >Ready />
+			[71] (306,466)<span >— />
+		[72] (321,466)<span  />
+		[73] (357,466)<span  />
+			[74] (334,466)<span  />
+			[75] (355,466)<span >Done />
+			[76] (379,466)<span >— />
+[77] (899,439)<select class='mgr-status-select mgr-select' />
+[78] (424,546)<div  />
+	[79] (424,525)<div  />
+		[80] (138,525)<div  />
+			[81] (58,525)<span >#5 />
+			[82] (97,525)<span >T2 />
+				[83] (87,526)<i  />
+			[84] (177,525)<span >AhmedAhmed />
+		[85] (701,525)<div  />
+			[86] (637,525)<span >Pending />
+			[87] (713,525)<span >Cash />
+			[88] (777,525)<span >60 EGP />
+	[89] (424,551)<div >Om Ali />
+	[90] (424,573)<div  />
+		[91] (97,573)<span  />
+			[92] (51,573)<span  />
+			[93] (76,573)<span >Placed />
+			[94] (123,573)<span >01:22 AM />
+		[95] (157,573)<span  />
+		[96] (200,573)<span  />
+			[97] (170,573)<span  />
+			[98] (197,573)<span >Kitchen />
+			[99] (227,573)<span >— />
+		[100] (243,573)<span  />
+		[101] (282,573)<span  />
+			[102] (256,573)<span  />
+			[103] (280,573)<span >Ready />
+			[104] (306,573)<span >— />
+		[105] (321,573)<span  />
+		[106] (358,573)<span  />
+			[107] (334,573)<span  />
+			[108] (355,573)<span >Done />
+			[109] (379,573)<span >— />
+[110] (899,546)<select class='mgr-status-select mgr-select' />
+[111] (424,653)<div  />
+	[112] (424,632)<div  />
+		[113] (113,632)<div  />
+			[114] (59,632)<span >#4 />
+			[115] (98,632)<span >T2 />
+				[116] (88,633)<i  />
+			[117] (153,632)<span >Ahmed />
+		[118] (687,632)<div  />
+			[119] (610,632)<span >Pending />
+			[120] (685,632)<span >Cash />
+			[121] (763,632)<span >109.25 EGP />
+	[122] (424,658)<div >Koshari, Sahlab />
+	[123] (424,680)<div  />
+		[124] (95,680)<span  />
+			[125] (51,680)<span  />
+			[126] (76,680)<span >Placed />
+			[127] (120,680)<span >01:11 AM />
+		[128] (152,680)<span  />
+		[129] (195,680)<span  />
+			[130] (165,680)<span  />
+			[131] (193,680)<span >Kitchen />
+			[132] (223,680)<span >— />
+		[133] (238,680)<span  />
+		[134] (278,680)<span  />
+			[135] (251,680)<span  />
+			[136] (275,680)<span >Ready />
+			[137] (302,680)<span >— />
+		[138] (317,680)<span  />
+		[139] (353,680)<span  />
+			[140] (330,680)<span  />
+			[141] (351,680)<span >Done />
+			[142] (375,680)<span >— />
+[143] (899,653)<select class='mgr-status-select mgr-select' />
+[144] (424,760)<div  />
+	[145] (424,739)<div  />
+		[146] (113,739)<div  />
+			[147] (58,739)<span >#3 />
+			[148] (98,739)<span >T5 />
+				[149] (88,740)<i  />
+			[150] (152,739)<span >Ahmed />
+		[151] (687,739)<div  />
+			[152] (610,739)<span >Pending />
+			[153] (685,739)<span >Cash />
+			[154] (763,739)<span >109.25 EGP />
+	[155] (424,765)<div >Koshari, Sahlab />
+	[156] (424,787)<div  />
+		[157] (97,787)<span  />
+			[158] (51,787)<span  />
+			[159] (76,787)<span >Placed />
+			[160] (123,787)<span >12:54 AM />
+		[161] (157,787)<span  />
+		[162] (200,787)<span  />
+			[163] (170,787)<span  />
+			[164] (197,787)<span >Kitchen />
+			[165] (227,787)<span >— />
+		[166] (243,787)<span  />
+		[167] (282,787)<span  />
+			[168] (256,787)<span  />
+			[169] (280,787)<span >Ready />
+			[170] (306,787)<span >— />
+		[171] (321,787)<span  />
+		[172] (358,787)<span  />
+			[173] (334,787)<span  />
+			[174] (355,787)<span >Done />
+			[175] (379,787)<span >— />
+[176] (899,760)<select class='mgr-status-select mgr-select' />
+[177] (424,868)<div  />
+	[178] (424,846)<div  />
+		[179] (113,846)<div  />
+			[180] (58,846)<span >#2 />
+			[181] (97,846)<span >T3 />
+				[182] (87,847)<i  />
+			[183] (152,846)<span >Ahmed />
+		[184] (701,846)<div  />
+			[185] (638,846)<span >Pending />
+			[186] (714,846)<span >Cash />
+			[187] (777,846)<span >55 EGP />
+	[188] (424,872)<div >Koshari />
+	[189] (424,894)<div  />
+		[190] (97,894)<span  />
+			[191] (51,894)<span  />
+			[192] (76,894)<span >Placed />
+			[193] (123,894)<span >12:43 AM />
+		[194] (157,894)<span  />
+		[195] (200,894)<span  />
+			[196] (170,894)<span  />
+			[197] (198,894)<span >Kitchen />
+			[198] (228,894)<span >— />
+		[199] (243,894)<span  />
+		[200] (282,894)<span  />
+			[201] (256,894)<span  />
+			[202] (280,894)<span >Ready />
+			[203] (306,894)<span >— />
+		[204] (322,894)<span  />
+		[205] (358,894)<span  />
+			[206] (334,894)<span  />
+			[207] (356,894)<span >Done />
+			[208] (379,894)<span >— />
+[209] (899,868)<select class='mgr-status-select mgr-select' />
+[210] (424,975)<div  />
+	[211] (424,953)<div  />
+		[212] (111,953)<div  />
+			[213] (57,953)<span >#1 />
+			[214] (94,953)<span >T3 />
+				[215] (84,954)<i  />
+			[216] (148,953)<span >Ahmed />
+		[217] (688,953)<div  />
+			[218] (611,953)<span >Pending />
+			[219] (687,953)<span >Cash />
+			[220] (763,953)<span >178.25 EGP />
+	[221] (424,980)<div >Koshari, Sahlab, Om Ali />
+	Placed
+	12:39 AM
+	Kitchen
+	—
+	Ready
+	—
+	Done
+	—
+[222] (899,975)<select class='mgr-status-select mgr-select' />
+
+</current_dom>

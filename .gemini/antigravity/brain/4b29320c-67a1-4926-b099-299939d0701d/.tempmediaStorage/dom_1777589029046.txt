@@ -1,0 +1,33 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+Two Experiences, One Destination
+Choose Your
+Culinary Journey
+Step into a world of authentic Egyptian flavors. Pick the experience that speaks to your soul.
+[0] (305,639)<a class='card card-modern' href='bites-and-sips/index.html' id='card-modern' />
+	[1] (190,513)<div  />
+		[2] (190,513)<i  />
+	[3] (305,586)<h2 >Bites & Sips />
+	[4] (305,630)<div  />
+		[5] (196,630)<span >Modern />
+		[6] (284,630)<span >Interactive />
+		[7] (364,630)<span >Cozy />
+	[8] (305,706)<p >A warm, modern cafe experience with artisanal Egyptian comfort food and refreshing drinks. />
+	[9] (217,785)<span >Explore Menu />
+		[10] (268,785)<i  />
+[11] (695,638)<a class='card card-ancient' href='anubis-table/index.html' id='card-ancient' />
+	[12] (580,512)<div  />
+		[13] (580,512)<i  />
+	[14] (695,585)<h2 >Anubis' Table />
+	[15] (695,629)<div  />
+		[16] (586,629)<span >Ancient />
+		[17] (666,629)<span >Mystical />
+		[18] (754,629)<span >Immersive />
+	[19] (695,705)<p >An immersive Egyptian-themed dining adventure with interactive oracle trials and rich flavors. />
+	[20] (618,784)<span >Enter the Temple />
+		[21] (681,784)<i  />
+Handcrafted with love in Cairo, Egypt
+
+</current_dom>

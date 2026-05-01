@@ -1,0 +1,24 @@
+Table T3
+[0] (935,938)<button aria-label='Toggle dark mode' class='floating-theme-btn' id='theme-toggle' />
+	[1] (935,938)<i  />
+[2] (935,863)<a aria-label='View your order' class='floating-order-btn' href='#order' id='floating-order-link' />
+	[3] (935,863)<i  />
+	[4] (956,844)<span >1 />
+Our Menu
+Food
+Koshari
+55 EGP
+Rice, lentils, pasta, chickpeas, crispy onions & spicy tomato sauce
+[5] (266,623)<button class='add-to-order-btn'>Add to Order />
+	[6] (212,623)<i  />
+Molokhia with Chicken
+120 EGP
+Jute leaves stew with garlic, coriander & tender chicken
+[7] (734,623)<button class='add-to-order-btn'>Add to Order />
+	[8] (680,623)<i  />
+Ful Medames
+35 EGP
+Slow-cooked fava beans with olive oil, lemon & cumin
+Hawawshi
+70 EGP
+Egyptian spiced minced meat baked in pita bread

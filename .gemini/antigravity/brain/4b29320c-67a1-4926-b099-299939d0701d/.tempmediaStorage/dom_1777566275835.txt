@@ -1,0 +1,15 @@
+[0] (939,939)<button aria-label='Toggle theme' class='floating-theme-btn' id='theme-toggle'>🌙 />
+Consult the Oracle
+Let the ancient Oracle divine your feast...
+[1] (500,474)<button class='btn btn-gold ripple' id='start-game'>Consult the Oracle />
+Anubis' Table
+Dine like a god. Drink like a pharaoh.
+Quick Links
+[2] (390,883)<a href='#menu'>Menu />
+[3] (445,923)<a href='#game'>Consult the Oracle />
+Contact
+The Eternal Address
+12 Tahrir Street, Cairo, Egypt
+beside the eternal Nile
+Phone: +20 123 456 7890
+Hours: Open from sunrise (Ra) to midnight (Khonsu)

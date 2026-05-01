@@ -1,0 +1,8 @@
+- `[x]` Update `menu-data.js` for Bites & Sips
+- `[x]` Update `menu-data.js` for Anubis' Table
+- `[x]` Update `index.html` structure for Bites & Sips
+- `[x]` Update `index.html` structure for Anubis' Table
+- `[x]` Rewrite `game.js` for Bites & Sips
+- `[x]` Rewrite `game.js` for Anubis' Table
+- `[x]` Add UI styling & animations for Bites & Sips
+- `[x]` Add UI styling & animations for Anubis' Table
