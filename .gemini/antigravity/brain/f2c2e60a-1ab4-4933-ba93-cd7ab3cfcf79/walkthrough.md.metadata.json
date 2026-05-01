@@ -1,5 +1,0 @@
-{
-  "artifactType":  "ARTIFACT_TYPE_WALKTHROUGH",
-  "summary":  "Walkthrough of the Bites & Sips ordering system implementation. Covers: modified files (index.html, style.css, responsive.css), new files (order.js, qr-generator.html/css/js), all test results with verification of cart operations, tip/payment calculations, table URL system, localStorage persistence, and QR code generation. Includes screenshots of the working order form and QR generator.",
-  "updatedAt":  "2026-05-01T01:27:53.504834777Z"
-}

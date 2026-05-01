@@ -1,8 +1,0 @@
-# Waiter Dashboard Verification Checklist
-
-- [ ] Navigate to http://localhost:8080/dashboard/waiter.html
-- [ ] Take a screenshot of the waiter cards
-- [ ] Inspect `.waiter-table-block` computed background-color
-- [ ] Inspect `.waiter-table-number` computed font-size
-- [ ] Check if items have bullet points
-- [ ] Report findings regarding visual prominence of table numbers

@@ -1,9 +1,0 @@
-Table T2
-[0] (940,939)<button aria-label='Toggle dark mode' class='floating-theme-btn' id='theme-toggle' />
-	[1] (940,939)<i  />
-[2] (940,864)<a aria-label='View your order' class='floating-order-btn' href='#order' id='floating-order-link' />
-	[3] (940,864)<i  />
-Play With Us
-Not sure what to order? Let us recommend something!
-[4] (500,513)<button class='btn btn-secondary' id='start-game'>Find My Craving />
-Your Order

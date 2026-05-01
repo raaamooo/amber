@@ -1,6 +1,0 @@
-{
-  "artifactType":  "ARTIFACT_TYPE_IMPLEMENTATION_PLAN",
-  "summary":  "Implementation plan for refactoring the recommendation game in both modern and ancient versions. Includes details on schema updates, game logic with branching and weighted scoring, UI/UX improvements, and file modifications.",
-  "updatedAt":  "2026-04-30T16:04:17.838799791Z",
-  "requestFeedback":  true
-}
